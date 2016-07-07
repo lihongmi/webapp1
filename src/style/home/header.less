@@ -1,0 +1,41 @@
+@import '../csslib.less';
+
+.background_imgcss(@width_nice, @height_nice,@baseurl_nice) { 
+    background-image: url(@baseurl_nice);
+    background-size: 100% 100%;
+    .rem(width, @width_nice);
+    .rem(height, @height_nice);
+}
+
+header img{
+	.rem(width, 750rem);
+	.rem(height, 127rem);
+}
+.header {
+	.rem(height, 85rem);
+	color:#fafafa;
+	ul li {
+		float: left;
+		a {
+			display: inline-block;
+			.rem(font-size, 25rem);
+			font-weight: bold;
+			color: @greyColor;
+			.rem(padding,10rem,20rem,10rem,20rem);
+			.rem(margin-top, 20rem);
+		}
+		.active{
+			border: 1px solid #adadad;
+			color: #fc8900;
+			.rem(border-radius, 30rem);
+		}
+	}
+	ul li:nth-of-type(1){
+		.background_imgcss(87rem,85rem,"../img/1.png");
+		.rem(margin-right, 10rem);
+	}
+	ul li:nth-of-type(7){
+		.background_imgcss(87rem,85rem,"../img/2.png");
+		.rem(margin-left, 10rem);
+	}
+}
